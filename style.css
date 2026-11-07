@@ -13,8 +13,8 @@
   --text: #F0EBE1;
   --muted: #888888;
   --border: rgba(255, 255, 255, 0.08);
-  --card: #111111;
-  --card-hover: #161616;
+  --card: rgba(17, 17, 17, 0.85);
+  --card-hover: rgba(25, 25, 25, 0.95);
 }
 
 *, *::before, *::after {
@@ -29,7 +29,10 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background: 
+    linear-gradient(rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0.92)),
+    url('bg.png.jpeg') no-repeat center center fixed;
+  background-size: cover;
   color: var(--text);
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
@@ -547,6 +550,8 @@ section {
 
 .about-card {
   background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.5rem 1.8rem;
@@ -583,6 +588,8 @@ section {
 
 .skill-cat {
   background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 2rem;
@@ -649,6 +656,8 @@ section {
 
 .project-card {
   background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
@@ -1050,6 +1059,8 @@ section {
 /* ── CONTACT FORM ── */
 .contact-form-card {
   background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 2.5rem;
