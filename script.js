@@ -106,25 +106,52 @@ document.querySelectorAll('video').forEach(vid => {
   }
 });
 
-// ── CONTACT FORM VIA AJAX ──
+// ── CONTACT FORM: EMAIL & WHATSAPP INTEGRATION ──
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
-const submitBtn = document.getElementById('submit-btn');
+const emailBtn = document.getElementById('email-submit-btn');
+const whatsappBtn = document.getElementById('whatsapp-submit-btn');
 
+function getFormData() {
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const subjectInput = document.getElementById('contact-subject');
+  const messageInput = document.getElementById('contact-message');
+
+  return {
+    name: nameInput ? nameInput.value.trim() : '',
+    email: emailInput ? emailInput.value.trim() : '',
+    subject: subjectInput && subjectInput.value.trim() ? subjectInput.value.trim() : 'New Portfolio Inquiry',
+    message: messageInput ? messageInput.value.trim() : ''
+  };
+}
+
+// 1. Send via Email (FormSubmit AJAX with mailto fallback)
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    if (submitBtn) {
-      submitBtn.value = 'Sending...';
-      submitBtn.disabled = true;
+    const data = getFormData();
+
+    if (!data.name || !data.email || !data.message) {
+      if (formStatus) {
+        formStatus.style.color = 'var(--coral)';
+        formStatus.innerHTML = '⚠️ Please fill in all required fields (Name, Email, Message).';
+      }
+      return;
     }
 
-    const payload = {
-      name: contactForm.elements['Name'] ? contactForm.elements['Name'].value : '',
-      email: contactForm.elements['Email'] ? contactForm.elements['Email'].value : '',
-      subject: contactForm.elements['Subject'] ? contactForm.elements['Subject'].value : 'New Portfolio Inquiry',
-      message: contactForm.elements['Message'] ? contactForm.elements['Message'].value : ''
-    };
+    if (emailBtn) {
+      emailBtn.innerHTML = `
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Sending...
+      `;
+      emailBtn.disabled = true;
+    }
+
+    if (formStatus) {
+      formStatus.style.color = 'var(--gold)';
+      formStatus.innerHTML = '⏳ Delivering your message...';
+    }
 
     fetch('https://formsubmit.co/ajax/ompatel4274@gmail.com', {
       method: 'POST',
@@ -132,27 +159,69 @@ if (contactForm) {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        Name: data.name,
+        Email: data.email,
+        _subject: 'Portfolio Message: ' + data.subject,
+        Message: data.message
+      })
     })
       .then(res => res.json())
-      .then(data => {
+      .then(() => {
         if (formStatus) {
-          formStatus.style.color = 'var(--gold)';
-          formStatus.innerHTML = '✅ Message sent successfully! I will get back to you soon.';
+          formStatus.style.color = '#22c55e';
+          formStatus.innerHTML = '✅ Message sent successfully to ompatel4274@gmail.com! I will reply shortly.';
         }
         contactForm.reset();
       })
-      .catch(err => {
+      .catch(() => {
+        const mailtoUrl = 'mailto:ompatel4274@gmail.com?subject=' + encodeURIComponent(data.subject) + '&body=' + encodeURIComponent('From: ' + data.name + ' (' + data.email + ')\n\n' + data.message);
+        window.location.href = mailtoUrl;
         if (formStatus) {
-          formStatus.style.color = '#ef4444';
-          formStatus.innerHTML = '⚠️ Note: Sending direct email. Please email directly to ompatel4274@gmail.com';
+          formStatus.style.color = 'var(--gold)';
+          formStatus.innerHTML = '📬 Opening your email client to send message...';
         }
       })
       .finally(() => {
-        if (submitBtn) {
-          submitBtn.value = 'Send Message';
-          submitBtn.disabled = false;
+        if (emailBtn) {
+          emailBtn.innerHTML = `
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            Send via Email
+          `;
+          emailBtn.disabled = false;
         }
       });
+  });
+}
+
+// 2. Send via WhatsApp (Direct wa.me integration with pre-filled message)
+if (whatsappBtn) {
+  whatsappBtn.addEventListener('click', function () {
+    const data = getFormData();
+
+    if (!data.name || !data.message) {
+      if (formStatus) {
+        formStatus.style.color = 'var(--coral)';
+        formStatus.innerHTML = '⚠️ Please enter at least your Name and Message to send via WhatsApp.';
+      }
+      const targetInput = !data.name ? document.getElementById('contact-name') : document.getElementById('contact-message');
+      if (targetInput) targetInput.focus();
+      return;
+    }
+
+    const waText =
+      "👋 *Hello Om Patel!* Reaching out from your portfolio:\n\n" +
+      "👤 *Name:* " + data.name + "\n" +
+      (data.email ? "📧 *Email:* " + data.email + "\n" : "") +
+      (data.subject ? "📌 *Subject:* " + data.subject + "\n\n" : "\n") +
+      "💬 *Message:*\n" + data.message;
+
+    const waUrl = "https://wa.me/917016698923?text=" + encodeURIComponent(waText);
+    window.open(waUrl, '_blank');
+
+    if (formStatus) {
+      formStatus.style.color = '#25D366';
+      formStatus.innerHTML = '💬 WhatsApp opened with your pre-filled message! Press send in WhatsApp.';
+    }
   });
 }
