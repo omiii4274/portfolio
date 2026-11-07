@@ -1,545 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om J Patel — Web Designer & Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om J Patel — Web Designer & Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="cursor" id="cur"></div>
-  <div class="cursor-ring" id="ring"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cur"></div>
+    <div class="cursor-ring" id="ring"></div>
 
-  <!-- Mobile Navigation Overlay -->
-  <div class="mob-nav" id="mobNav">
-    <a href="#about" onclick="closeMob()">About</a>
-    <a href="#skills" onclick="closeMob()">Skills</a>
-    <a href="#projects" onclick="closeMob()">Projects</a>
-    <a href="#experience" onclick="closeMob()">Experience</a>
-    <a href="#education" onclick="closeMob()">Education</a>
-    <a href="#contact" onclick="closeMob()">Contact</a>
-    <a href="Om_Patel_Resume.pdf" target="_blank" onclick="closeMob()" style="color:var(--gold);">Resume ↗</a>
-  </div>
-
-  <!-- Desktop Navigation -->
-  <nav id="mainNav">
-    <a class="nav-logo" href="#">OM <span>PATEL</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a class="nav-cta" href="mailto:ompatel4274@gmail.com">Hire Me</a>
-      <button class="ham" id="ham" aria-label="Toggle navigation menu" onclick="toggleMob()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- ── HERO SECTION ── -->
-  <section class="hero">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow2"></div>
-    <div class="hero-content">
-      <div class="hero-tag">Available for Full-Time Opportunities</div>
-      <h1>Om<br><em>Patel</em></h1>
-      <p class="hero-sub">Web Designer & Developer crafting pixel-perfect interfaces and seamless digital experiences — from Figma wireframes to full-stack web applications.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          View Work
-        </a>
-        <a href="Om_Patel_Resume.pdf" target="_blank" class="btn-outline">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Resume
-        </a>
-        <a href="mailto:ompatel4274@gmail.com" class="btn-outline">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-          Say Hello
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">10</div>
-          <div class="stat-label">Months Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">6<span>+</span></div>
-          <div class="stat-label">Projects Built</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">100<span>%</span></div>
-          <div class="stat-label">Dedication</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-photo-wrap">
-      <img src="Me.jpg" alt="Om J Patel" class="hero-photo">
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── ABOUT SECTION ── -->
-  <section id="about">
-    <div class="section-label">Who I Am</div>
-    <h2 class="section-title">Designing with <em>purpose</em>,<br>building with precision.</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>I'm Om J Patel, a final-year B.Tech Information Technology student at <strong>Parul University, Vadodara</strong> — and a passionate <strong>Web Designer & Developer</strong> with hands-on UI/UX internship experience using Figma and modern web technologies.</p>
-        <p>I bridge the gap between aesthetics and function — transforming user requirements into intuitive layouts in <strong>Figma</strong>, then bringing them to life with <strong>HTML5, CSS3, JavaScript, PHP & MySQL</strong>. From luxury fashion e-commerce to emergency blood bank systems and IoT automation, I create software that makes an impact.</p>
-        <p>I'm an eager learner, analytical problem solver, and collaborative team player excited to contribute creative design solutions to innovative product teams.</p>
-        <div class="about-contact-row">
-          <a href="tel:+917016698923">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +91 7016698923
-          </a>
-          <a href="mailto:ompatel4274@gmail.com">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-            ompatel4274@gmail.com
-          </a>
-          <a href="https://www.linkedin.com/in/om-j-patel-4p2oo7j4a/" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            LinkedIn: Om Patel
-          </a>
-          <a href="https://github.com/omiii6342" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-            GitHub: omiii6342
-          </a>
-          <a href="#">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Vadodara, Gujarat, India
-          </a>
-        </div>
-      </div>
-      <div class="about-right reveal">
-        <div class="about-card">
-          <div class="about-card-label">Current Status</div>
-          <div class="about-card-val">Final Year B.Tech — IT @ Parul University</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-label">CGPA</div>
-          <div class="about-card-val">7.18 / 10.0</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-label">Availability</div>
-          <div class="about-card-val">Open to Full-Time Roles — Immediately</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-label">Focus Areas</div>
-          <div class="about-card-val">Frontend Development · UI/UX Design · Full-Stack Web</div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-label">Core Strength</div>
-          <div class="about-card-val">Translating ideas into polished, user-centered digital products</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── SKILLS SECTION ── -->
-  <section id="skills">
-    <div class="section-label">What I Know</div>
-    <h2 class="section-title">Skills & <em>Tools</em></h2>
-    <div class="skills-grid">
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">💻</div>
-        <div class="skill-cat-title">Frontend Development</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript (ES6+)</span>
-          <span class="skill-tag">React Native</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">Responsive Design</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">⚙️</div>
-        <div class="skill-cat-title">Backend & Database</div>
-        <div class="skill-tags">
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">RESTful APIs</span>
-          <span class="skill-tag">MySQL Workbench</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">🎨</div>
-        <div class="skill-cat-title">UI/UX Design</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Wireframing</span>
-          <span class="skill-tag">Interactive Prototyping</span>
-          <span class="skill-tag">High-Fidelity Mockups</span>
-          <span class="skill-tag">User Flows</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">🤖</div>
-        <div class="skill-cat-title">AI & Modern Tools</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Claude</span>
-          <span class="skill-tag">ChatGPT</span>
-          <span class="skill-tag">Google Stitch</span>
-          <span class="skill-tag">AI Studio</span>
-          <span class="skill-tag">Vibe Coding</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">🔌</div>
-        <div class="skill-cat-title">Hardware & IoT</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Arduino Uno</span>
-          <span class="skill-tag">IoT Modules</span>
-          <span class="skill-tag">Motion Sensors</span>
-          <span class="skill-tag">Flame Sensors</span>
-          <span class="skill-tag">Bluetooth Control</span>
-        </div>
-      </div>
-      <div class="skill-cat reveal">
-        <div class="skill-cat-icon">🤝</div>
-        <div class="skill-cat-title">Professional & Productivity</div>
-        <div class="skill-tags">
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Git & GitHub</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Analytical Thinking</span>
-          <span class="skill-tag">Team Collaboration</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── SELECTED WORK (PROJECTS) ── -->
-  <section id="projects">
-    <div class="projects-header">
-      <div>
-        <div class="section-label">What I've Built</div>
-        <h2 class="section-title">Selected <em>Work</em></h2>
-      </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mob-nav" id="mobNav">
+        <a href="#about" onclick="closeMob()">About</a>
+        <a href="#skills" onclick="closeMob()">Skills</a>
+        <a href="#projects" onclick="closeMob()">Projects</a>
+        <a href="#experience" onclick="closeMob()">Experience</a>
+        <a href="#education" onclick="closeMob()">Education</a>
+        <a href="#contact" onclick="closeMob()">Contact</a>
+        <a href="Om_Patel_Resume.pdf" target="_blank" onclick="closeMob()" style="color:var(--gold);">Resume ↗</a>
     </div>
 
-    <div class="projects-grid">
-
-      <!-- FEATURED PROJECT: Nomadic -->
-      <div class="project-card featured reveal">
-        <div class="project-media">
-          <video autoplay muted loop playsinline>
-            <source src="tour_.mp4" type="video/mp4">
-            <source src="https://rajvee27.github.io/portfolio/tour_.mp4" type="video/mp4">
-          </video>
-          <div class="play-badge">Featured Demo</div>
-        </div>
-        <div class="project-info">
-          <div class="project-type">Academic Project · Full Stack</div>
-          <div class="project-name">Nomadic — Tour & Travel Booking</div>
-          <p class="project-desc">A fully responsive travel booking platform with dynamic destination browsing, user authentication, and end-to-end booking management. Designed the relational DB schema and backend APIs to reduce query complexity while delivering a seamless booking UX.</p>
-          <div class="project-tech">
-            <span class="tech-chip">PHP</span>
-            <span class="tech-chip">MySQL</span>
-            <span class="tech-chip">HTML5</span>
-            <span class="tech-chip">CSS3</span>
-            <span class="tech-chip">JavaScript</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blood Bank Coordination -->
-      <div class="project-card reveal">
-        <div class="project-media">
-          <video autoplay muted loop playsinline>
-            <source src="bloodbank.mp4" type="video/mp4">
-            <source src="https://rajvee27.github.io/portfolio/bloodbank.mp4" type="video/mp4">
-          </video>
-          <div class="play-badge">Live Demo</div>
-        </div>
-        <div class="project-info">
-          <div class="project-type">Academic Project · Full Stack</div>
-          <div class="project-name">Blood Bank Coordination</div>
-          <p class="project-desc">A web platform connecting donors, patients, and blood banks with real-time blood availability tracking and secure backend operations.</p>
-          <div class="project-tech">
-            <span class="tech-chip">PHP</span>
-            <span class="tech-chip">MySQL</span>
-            <span class="tech-chip">HTML</span>
-            <span class="tech-chip">CSS</span>
-            <span class="tech-chip">JavaScript</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- GLAM VIBES -->
-      <div class="project-card reveal">
-        <div class="project-media">
-          <video autoplay muted loop playsinline>
-            <source src="glamvibes.mp4" type="video/mp4">
-            <source src="https://rajvee27.github.io/portfolio/glamvibes.mp4" type="video/mp4">
-          </video>
-          <div class="play-badge">Frontend Showcase</div>
-        </div>
-        <div class="project-info">
-          <div class="project-type">Internship Work · Frontend</div>
-          <div class="project-name">GLAM VIBES</div>
-          <p class="project-desc">A luxury fashion e-commerce website with hero carousels, product drawers, vibe-based filtering, and smooth scroll animations. Built entirely with HTML, CSS & JavaScript.</p>
-          <div class="project-tech">
-            <span class="tech-chip">HTML5</span>
-            <span class="tech-chip">CSS3</span>
-            <span class="tech-chip">JavaScript</span>
-            <span class="tech-chip">Swiper.js</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- IoT Anti-Theft Security -->
-      <div class="project-card reveal">
-        <div class="project-media" style="height:320px; background:#0a0a0a;">
-          <img src="iot_antitheft.jpeg" alt="IoT Anti-Theft Security System" style="width:100%;height:100%;object-fit:contain;display:block;opacity:0.92;padding:0.5rem;">
-          <div class="play-badge">Hardware Project</div>
-        </div>
-        <div class="project-info">
-          <div class="project-type">Academic Project · IoT</div>
-          <div class="project-name">IoT Anti-Theft Security</div>
-          <p class="project-desc">Smart security system using motion & proximity sensors with real-time unauthorized access alerts via Arduino Uno and IoT modules for remote monitoring.</p>
-          <div class="project-tech">
-            <span class="tech-chip">Arduino Uno</span>
-            <span class="tech-chip">IoT Modules</span>
-            <span class="tech-chip">Motion Sensors</span>
-            <span class="tech-chip">Proximity Sensors</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Figma Design Work -->
-    <div style="margin-top:5rem;">
-      <div class="section-label">UI/UX Design Work</div>
-      <h3 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);">Figma <em>Designs</em></h3>
-      <div class="figma-grid">
-        <div class="figma-card reveal">
-          <div class="figma-video-wrap">
-            <video autoplay muted loop playsinline>
-              <source src="figma_1.mp4" type="video/mp4">
-              <source src="https://rajvee27.github.io/portfolio/figma_1.mp4" type="video/mp4">
-            </video>
-            <div class="figma-badge">Figma · UI/UX</div>
-          </div>
-          <div class="figma-info">
-            <div class="figma-title">UI Design Prototype — Vol. 1</div>
-            <div class="figma-sub">Wireframing · High-Fidelity Mockup · User Flow · Prototype</div>
-          </div>
-        </div>
-        <div class="figma-card reveal">
-          <div class="figma-video-wrap">
-            <video autoplay muted loop playsinline>
-              <source src="figma_2.mp4" type="video/mp4">
-              <source src="https://rajvee27.github.io/portfolio/figma_2.mp4" type="video/mp4">
-            </video>
-            <div class="figma-badge">Figma · UI/UX</div>
-          </div>
-          <div class="figma-info">
-            <div class="figma-title">UI Design Prototype — Vol. 2</div>
-            <div class="figma-sub">Responsive Layout · Component Design · Interactive Prototype</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- IoT Fire Robot -->
-    <div style="margin-top:3rem;">
-      <div class="project-card reveal" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));border-radius:18px;overflow:hidden;">
-        <div class="project-media" style="min-height:220px;position:relative;">
-          <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.92;">
-            <source src="iot_robot.mp4" type="video/mp4">
-            <source src="https://rajvee27.github.io/portfolio/iot_robot.mp4" type="video/mp4">
-          </video>
-          <div class="play-badge">Hardware Project</div>
-        </div>
-        <div class="project-info" style="padding:1.8rem 2.2rem;">
-          <div class="project-type">Academic Project · IoT + Robotics</div>
-          <div class="project-name" style="font-size:1.35rem;">IoT Fire-Fighting Robot</div>
-          <p class="project-desc" style="font-size:0.88rem;">Autonomous robot detecting fire via flame sensors, activating a water spray response, with Bluetooth-based mobile control for remote override.</p>
-          <div class="project-tech">
-            <span class="tech-chip">Arduino</span>
-            <span class="tech-chip">Flame Sensors</span>
-            <span class="tech-chip">Bluetooth</span>
-            <span class="tech-chip">IoT</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── EXPERIENCE SECTION ── -->
-  <section id="experience">
-    <div class="section-label">Work History</div>
-    <h2 class="section-title">Internship <em>Experience</em></h2>
-    <div class="timeline reveal">
-
-      <div class="timeline-item">
-        <div class="timeline-period">Jan 2026 – Apr 2026 · Internship</div>
-        <div class="timeline-role">UI/UX Design Intern</div>
-        <div class="timeline-company">Quix Solutions PVT LTD, Vadodara</div>
-        <ul class="timeline-points">
-          <li>Assisted in UI/UX design workflows using Figma and contributed to real-world live client projects.</li>
-          <li>Developed responsive web and mobile application screens using React Native and modern front-end technologies.</li>
-          <li>Integrated AI Studio and Google Stitch tools for accelerated wireframing and prototyping iterations.</li>
-          <li>Collaborated closely with development teams to convert product requirements into intuitive user interfaces.</li>
+    <!-- Desktop Navigation -->
+    <nav id="mainNav">
+        <a class="nav-logo" href="#">OM <span>PATEL</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── EDUCATION & CERTIFICATIONS ── -->
-  <section id="education">
-    <div class="section-label">Academic Background</div>
-    <h2 class="section-title">Education & <em>Certifications</em></h2>
-    <div class="edu-certs-grid">
-
-      <div class="edu-list reveal">
-        <div class="edu-card">
-          <div class="edu-degree">B.Tech — Information Technology</div>
-          <div class="edu-school">Parul University, Limda Vadodara · 2023 – 2026 (Final Year)</div>
-          <div class="edu-grade">CGPA: 7.18 / 10.0</div>
-        </div>
-      </div>
-
-      <div class="cert-list reveal">
-        <div class="cert-item">
-          <div class="cert-icon">🌐</div>
-          <div>
-            <div class="cert-name">Introduction to IoT</div>
-            <div class="cert-by">Great Learning</div>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">🖧</div>
-          <div>
-            <div class="cert-name">Computer Networking</div>
-            <div class="cert-by">NPTEL</div>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">📈</div>
-          <div>
-            <div class="cert-name">Power BI Workshop</div>
-            <div class="cert-by">2-Day Certified Workshop</div>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">📊</div>
-          <div>
-            <div class="cert-name">Deloitte Data Analytics</div>
-            <div class="cert-by">Deloitte Certificate</div>
-          </div>
-        </div>
-        <div class="cert-item">
-          <div class="cert-icon">🐍</div>
-          <div>
-            <div class="cert-name">Python & Advanced Python</div>
-            <div class="cert-by">Certified Training</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── CONTACT SECTION ── -->
-  <section id="contact">
-    <div class="contact-wrap">
-      <div class="section-label" style="justify-content:center;">Get In Touch</div>
-      <h2 class="section-title" style="text-align:center;">Let's build something<br><em>great together.</em></h2>
-      <p class="contact-intro">I'm actively looking for full-time opportunities in web design & development. Whether you have an open role, a project in mind, or just want to connect — my inbox is always open.</p>
-      <a href="mailto:ompatel4274@gmail.com" class="contact-email">ompatel4274@gmail.com</a>
-      
-      <div class="social-row">
-        <a href="https://www.linkedin.com/in/om-j-patel-4p2oo7j4a/" class="social-btn" target="_blank">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/omiii6342" class="social-btn" target="_blank">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </a>
-        <a href="tel:+917016698923" class="social-btn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +91 7016698923
-        </a>
-        <a href="https://maps.google.com/?q=Vadodara+Gujarat" class="social-btn" target="_blank">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Vadodara, Gujarat
-        </a>
-      </div>
-
-      <!-- Interactive Contact Form -->
-      <div class="contact-form-card reveal">
-        <div class="contact-form-title">Send a Quick Message</div>
-        <div class="contact-form-sub">Choose your preferred way to connect — send directly to my email or open a WhatsApp chat.</div>
-        <form id="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your Name *</label>
-              <input type="text" id="contact-name" name="Name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label>Your Email *</label>
-              <input type="email" id="contact-email" name="Email" placeholder="john@example.com" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <input type="text" id="contact-subject" name="Subject" placeholder="Project Inquiry / Job Opportunity">
-          </div>
-          <div class="form-group">
-            <label>Message *</label>
-            <textarea id="contact-message" name="Message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn-primary btn-email" id="email-submit-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-              Send via Email
+        <div class="nav-actions">
+            <a class="nav-cta" href="mailto:ompatel4274@gmail.com">Hire Me</a>
+            <button class="ham" id="ham" aria-label="Toggle navigation menu" onclick="toggleMob()">
+                <span></span><span></span><span></span>
             </button>
-            <button type="button" class="btn-primary btn-whatsapp" id="whatsapp-submit-btn">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              Send via WhatsApp
-            </button>
-          </div>
-        </form>
-        <div class="form-status" id="form-status"></div>
-      </div>
-    </div>
-  </section>
+        </div>
+    </nav>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <span>© 2026 Om J Patel. Designed & developed with precision.</span>
-    <span>Web Designer & Developer · Vadodara, India</span>
-  </footer>
+    <!-- ── HERO SECTION ── -->
+    <section class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-glow2"></div>
+        <div class="hero-content">
+            <div class="hero-tag">Available for Full-Time Opportunities</div>
+            <h1>Om<br><em>Patel</em></h1>
+            <p class="hero-sub">Web Designer & Developer crafting pixel-perfect interfaces and seamless digital
+                experiences — from Figma wireframes to full-stack web applications.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    View Work
+                </a>
+                <a href="Om_Patel_Resume.pdf" target="_blank" class="btn-outline">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Resume
+                </a>
+                <a href="mailto:ompatel4274@gmail.com" class="btn-outline">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,12 2,6" />
+                    </svg>
+                    Say Hello
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">10</div>
+                    <div class="stat-label">Months Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">6<span>+</span></div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">100<span>%</span></div>
+                    <div class="stat-label">Dedication</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-photo-wrap">
+            <img src="Me.jpg" alt="Om J Patel" class="hero-photo">
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <hr class="divider">
+
+    <!-- ── ABOUT SECTION ── -->
+    <section id="about">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">Designing with <em>purpose</em>,<br>building with precision.</h2>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p>I'm Om J Patel, a final-year B.Tech Information Technology student at <strong>Parul University,
+                        Vadodara</strong> — and a passionate <strong>Web Designer & Developer</strong> with hands-on
+                    UI/UX internship experience using Figma and modern web technologies.</p>
+                <p>I bridge the gap between aesthetics and function — transforming user requirements into intuitive
+                    layouts in <strong>Figma</strong>, then bringing them to life with <strong>HTML5, CSS3, JavaScript,
+                        PHP & MySQL</strong>. From luxury fashion e-commerce to emergency blood bank systems and IoT
+                    automation, I create software that makes an impact.</p>
+                <p>I'm an eager learner, analytical problem solver, and collaborative team player excited to contribute
+                    creative design solutions to innovative product teams.</p>
+                <div class="about-contact-row">
+                    <a href="tel:+917016698923">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +91 7016698923
+                    </a>
+                    <a href="mailto:ompatel4274@gmail.com">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,12 2,6" />
+                        </svg>
+                        ompatel4274@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/om-j-patel-4p2oo7j4a/" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        LinkedIn: Om Patel
+                    </a>
+                    <a href="https://github.com/omiii6342" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        GitHub: omiii6342
+                    </a>
+                    <a href="#">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Vadodara, Gujarat, India
+                    </a>
+                </div>
+            </div>
+            <div class="about-right reveal">
+                <div class="about-card">
+                    <div class="about-card-label">Current Status</div>
+                    <div class="about-card-val">Final Year B.Tech — IT @ Parul University</div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-label">CGPA</div>
+                    <div class="about-card-val">7.18 / 10.0</div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-label">Availability</div>
+                    <div class="about-card-val">Open to Full-Time Roles — Immediately</div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-label">Focus Areas</div>
+                    <div class="about-card-val">Frontend Development · UI/UX Design · Full-Stack Web</div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-label">Core Strength</div>
+                    <div class="about-card-val">Translating ideas into polished, user-centered digital products</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── SKILLS SECTION ── -->
+    <section id="skills">
+        <div class="section-label">What I Know</div>
+        <h2 class="section-title">Skills & <em>Tools</em></h2>
+        <div class="skills-grid">
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">💻</div>
+                <div class="skill-cat-title">Frontend Development</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">React Native</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">🗄️</div>
+                <div class="skill-cat-title">Database</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MySQL Workbench</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Relational Database</span>
+                    <span class="skill-tag">Database Design</span>
+                </div>
+            </div>
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">🎨</div>
+                <div class="skill-cat-title">UI/UX Design</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Wireframing</span>
+                    <span class="skill-tag">Interactive Prototyping</span>
+                    <span class="skill-tag">High-Fidelity Mockups</span>
+                    <span class="skill-tag">User Flows</span>
+                </div>
+            </div>
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">🤖</div>
+                <div class="skill-cat-title">AI & Modern Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Claude</span>
+                    <span class="skill-tag">ChatGPT</span>
+                    <span class="skill-tag">Google Stitch</span>
+                    <span class="skill-tag">AI Studio</span>
+                    <span class="skill-tag">Vibe Coding</span>
+                </div>
+            </div>
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">🔌</div>
+                <div class="skill-cat-title">Hardware & IoT</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Arduino Uno</span>
+                    <span class="skill-tag">IoT Modules</span>
+                    <span class="skill-tag">Motion Sensors</span>
+                    <span class="skill-tag">Flame Sensors</span>
+                    <span class="skill-tag">Bluetooth Control</span>
+                </div>
+            </div>
+            <div class="skill-cat reveal">
+                <div class="skill-cat-icon">🤝</div>
+                <div class="skill-cat-title">Professional & Productivity</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Analytical Thinking</span>
+                    <span class="skill-tag">Team Collaboration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── SELECTED WORK (PROJECTS) ── -->
+    <section id="projects">
+        <div class="projects-header">
+            <div>
+                <div class="section-label">What I've Built</div>
+                <h2 class="section-title">Selected <em>Work</em></h2>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- FEATURED PROJECT: Nomadic -->
+            <div class="project-card featured reveal">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="tour_.mp4" type="video/mp4">
+                        <source src="https://rajvee27.github.io/portfolio/tour_.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-badge">Featured Demo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Academic Project · Full Stack</div>
+                    <div class="project-name">Nomadic — Tour & Travel Booking</div>
+                    <p class="project-desc">A fully responsive travel booking platform with dynamic destination
+                        browsing, user authentication, and end-to-end booking management. Designed the relational DB
+                        schema and backend APIs to reduce query complexity while delivering a seamless booking UX.</p>
+                    <div class="project-tech">
+                        <span class="tech-chip">PHP</span>
+                        <span class="tech-chip">MySQL</span>
+                        <span class="tech-chip">HTML5</span>
+                        <span class="tech-chip">CSS3</span>
+                        <span class="tech-chip">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLAM VIBES -->
+            <div class="project-card reveal">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="glamvibes.mp4" type="video/mp4">
+                        <source src="https://rajvee27.github.io/portfolio/glamvibes.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-badge">Frontend Showcase</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Internship Work · Frontend</div>
+                    <div class="project-name">GLAM VIBES</div>
+                    <p class="project-desc">A luxury fashion e-commerce website with hero carousels, product drawers,
+                        vibe-based filtering, and smooth scroll animations. Built entirely with HTML, CSS & JavaScript.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-chip">HTML5</span>
+                        <span class="tech-chip">CSS3</span>
+                        <span class="tech-chip">JavaScript</span>
+                        <span class="tech-chip">Swiper.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IoT Anti-Theft Security -->
+            <div class="project-card reveal">
+                <div class="project-media" style="height:320px; background:#0a0a0a;">
+                    <img src="iot_antitheft.jpeg" alt="IoT Anti-Theft Security System"
+                        style="width:100%;height:100%;object-fit:contain;display:block;opacity:0.92;padding:0.5rem;">
+                    <div class="play-badge">Hardware Project</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Academic Project · IoT</div>
+                    <div class="project-name">IoT Anti-Theft Security</div>
+                    <p class="project-desc">Smart security system using motion & proximity sensors with real-time
+                        unauthorized access alerts via Arduino Uno and IoT modules for remote monitoring.</p>
+                    <div class="project-tech">
+                        <span class="tech-chip">Arduino Uno</span>
+                        <span class="tech-chip">IoT Modules</span>
+                        <span class="tech-chip">Motion Sensors</span>
+                        <span class="tech-chip">Proximity Sensors</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IoT Fire Robot -->
+            <div class="project-card featured reveal" style="grid-column: 1 / -1;">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="iot_robot.mp4" type="video/mp4">
+                        <source src="https://rajvee27.github.io/portfolio/iot_robot.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-badge">Robotics & IoT</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Academic Project · IoT + Robotics</div>
+                    <div class="project-name">IoT Fire-Fighting Robot</div>
+                    <p class="project-desc">Autonomous robot detecting fire via flame sensors, activating a water spray
+                        response, with Bluetooth-based mobile application control for remote manual override.</p>
+                    <div class="project-tech">
+                        <span class="tech-chip">Arduino Uno</span>
+                        <span class="tech-chip">Flame Sensors</span>
+                        <span class="tech-chip">Bluetooth</span>
+                        <span class="tech-chip">IoT</span>
+                        <span class="tech-chip">Mobile App</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Figma Design Work -->
+        <div style="margin-top:5rem;">
+            <div class="section-label">UI/UX Design Work</div>
+            <h3 class="section-title" style="font-size:clamp(1.6rem,3vw,2.4rem);">Figma <em>Designs</em></h3>
+            <div class="figma-grid">
+                <div class="figma-card reveal">
+                    <div class="figma-video-wrap">
+                        <video autoplay muted loop playsinline>
+                            <source src="figma_1.mp4" type="video/mp4">
+                            <source src="https://rajvee27.github.io/portfolio/figma_1.mp4" type="video/mp4">
+                        </video>
+                        <div class="figma-badge">Figma · UI/UX</div>
+                    </div>
+                    <div class="figma-info">
+                        <div class="figma-title">UI Design Prototype — Vol. 1</div>
+                        <div class="figma-sub">Wireframing · High-Fidelity Mockup · User Flow · Prototype</div>
+                    </div>
+                </div>
+                <div class="figma-card reveal">
+                    <div class="figma-video-wrap">
+                        <video autoplay muted loop playsinline>
+                            <source src="figma_2.mp4" type="video/mp4">
+                            <source src="https://rajvee27.github.io/portfolio/figma_2.mp4" type="video/mp4">
+                        </video>
+                        <div class="figma-badge">Figma · UI/UX</div>
+                    </div>
+                    <div class="figma-info">
+                        <div class="figma-title">UI Design Prototype — Vol. 2</div>
+                        <div class="figma-sub">Responsive Layout · Component Design · Interactive Prototype</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── EXPERIENCE SECTION ── -->
+    <section id="experience">
+        <div class="section-label">Work History</div>
+        <h2 class="section-title">Internship <em>Experience</em></h2>
+        <div class="timeline reveal">
+
+            <div class="timeline-item">
+                <div class="timeline-period">Jan 2026 – Apr 2026 · Internship</div>
+                <div class="timeline-role">UI/UX Design Intern</div>
+                <div class="timeline-company">Quix Solutions PVT LTD, Vadodara</div>
+                <ul class="timeline-points">
+                    <li>Assisted in UI/UX design workflows using Figma and contributed to real-world live client
+                        projects.</li>
+                    <li>Developed responsive web and mobile application screens using React Native and modern front-end
+                        technologies.</li>
+                    <li>Integrated AI Studio and Google Stitch tools for accelerated wireframing and prototyping
+                        iterations.</li>
+                    <li>Collaborated closely with development teams to convert product requirements into intuitive user
+                        interfaces.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── EDUCATION & CERTIFICATIONS ── -->
+    <section id="education">
+        <div class="section-label">Academic Background</div>
+        <h2 class="section-title">Education & <em>Certifications</em></h2>
+        <div class="edu-certs-grid">
+
+            <div class="edu-list reveal">
+                <div class="edu-card">
+                    <div class="edu-degree">B.Tech — Information Technology</div>
+                    <div class="edu-school">Parul University, Limda Vadodara · 2023 – 2026 (Final Year)</div>
+                    <div class="edu-grade">CGPA: 7.18 / 10.0</div>
+                </div>
+            </div>
+
+            <div class="cert-list reveal">
+                <div class="cert-item">
+                    <div class="cert-icon">🌐</div>
+                    <div>
+                        <div class="cert-name">Introduction to IoT</div>
+                        <div class="cert-by">Great Learning</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🖧</div>
+                    <div>
+                        <div class="cert-name">Computer Networking</div>
+                        <div class="cert-by">NPTEL</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">📈</div>
+                    <div>
+                        <div class="cert-name">Power BI Workshop</div>
+                        <div class="cert-by">2-Day Certified Workshop</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">📊</div>
+                    <div>
+                        <div class="cert-name">Deloitte Data Analytics</div>
+                        <div class="cert-by">Deloitte Certificate</div>
+                    </div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-icon">🐍</div>
+                    <div>
+                        <div class="cert-name">Python & Advanced Python</div>
+                        <div class="cert-by">Certified Training</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── CONTACT SECTION ── -->
+    <section id="contact">
+        <div class="contact-wrap">
+            <div class="section-label" style="justify-content:center;">Get In Touch</div>
+            <h2 class="section-title" style="text-align:center;">Let's build something<br><em>great together.</em></h2>
+            <p class="contact-intro">I'm actively looking for full-time opportunities in web design & development.
+                Whether you have an open role, a project in mind, or just want to connect — my inbox is always open.</p>
+            <a href="mailto:ompatel4274@gmail.com" class="contact-email">ompatel4274@gmail.com</a>
+
+            <div class="social-row">
+                <a href="https://www.linkedin.com/in/om-j-patel-4p2oo7j4a/" class="social-btn" target="_blank">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/omiii6342" class="social-btn" target="_blank">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="tel:+917016698923" class="social-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.48 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    +91 7016698923
+                </a>
+                <a href="https://maps.google.com/?q=Vadodara+Gujarat" class="social-btn" target="_blank">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Vadodara, Gujarat
+                </a>
+            </div>
+
+            <!-- Interactive Contact Form -->
+            <div class="contact-form-card reveal">
+                <div class="contact-form-title">Send a Quick Message</div>
+                <div class="contact-form-sub">Choose your preferred way to connect — send directly to my email or open a
+                    WhatsApp chat.</div>
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" id="contact-name" name="Name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email *</label>
+                            <input type="email" id="contact-email" name="Email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" id="contact-subject" name="Subject"
+                            placeholder="Project Inquiry / Job Opportunity">
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea id="contact-message" name="Message" rows="5"
+                            placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-email" id="email-submit-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,12 2,6" />
+                            </svg>
+                            Send via Email
+                        </button>
+                        <button type="button" class="btn-primary btn-whatsapp" id="whatsapp-submit-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                            Send via WhatsApp
+                        </button>
+                    </div>
+                </form>
+                <div class="form-status" id="form-status"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>© 2026 Om J Patel. Designed & developed with precision.</span>
+        <span>Web Designer & Developer · Vadodara, India</span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
