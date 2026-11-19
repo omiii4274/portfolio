@@ -942,7 +942,11 @@ function switchResumeTab(tabName) {
     if (btnPdf) btnPdf.classList.remove('active');
     if (btnSummary) btnSummary.classList.add('active');
     if (viewPdf) viewPdf.classList.remove('active');
-    if (viewSummary) viewSummary.classList.add('active');
+    if (viewSummary) {
+      viewSummary.classList.add('active');
+      const doc = viewSummary.querySelector('.resume-doc');
+      if (doc) doc.scrollTop = 0;
+    }
   }
 }
 
