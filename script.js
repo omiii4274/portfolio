@@ -907,10 +907,50 @@ function closeProjectModal(e) {
   }
 }
 
+// ── RESUME MODAL HANDLERS ──
+function openResumeModal() {
+  const backdrop = document.getElementById('resumeModalBackdrop');
+  if (backdrop) {
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeResumeModal(e) {
+  if (e && e.target && e.target.id !== 'resumeModalBackdrop' && !e.target.classList.contains('modal-close-btn')) {
+    return;
+  }
+  const backdrop = document.getElementById('resumeModalBackdrop');
+  if (backdrop) {
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function switchResumeTab(tabName) {
+  const btnPdf = document.getElementById('tabBtnPdf');
+  const btnSummary = document.getElementById('tabBtnSummary');
+  const viewPdf = document.getElementById('resumePdfView');
+  const viewSummary = document.getElementById('resumeSummaryView');
+
+  if (tabName === 'pdf') {
+    if (btnPdf) btnPdf.classList.add('active');
+    if (btnSummary) btnSummary.classList.remove('active');
+    if (viewPdf) viewPdf.classList.add('active');
+    if (viewSummary) viewSummary.classList.remove('active');
+  } else {
+    if (btnPdf) btnPdf.classList.remove('active');
+    if (btnSummary) btnSummary.classList.add('active');
+    if (viewPdf) viewPdf.classList.remove('active');
+    if (viewSummary) viewSummary.classList.add('active');
+  }
+}
+
 // ESC Key listener to close modal
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeProjectModal();
+    closeResumeModal();
   }
 });
 

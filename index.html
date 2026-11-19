@@ -5,6 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om J Patel — Web Designer & Developer</title>
+    <meta name="description" content="Om J Patel — Web Designer & Developer. Final-year B.Tech IT student at Parul University specializing in UI/UX Design, frontend development, and full-stack web applications.">
+    <meta name="keywords" content="Om Patel, Web Designer, Web Developer, UI UX, Parul University, Vadodara, Frontend Developer, Full Stack, Portfolio">
+    <meta name="author" content="Om J Patel">
+    <link rel="canonical" href="https://omiii4274.github.io/portfolio/">
+
+    <!-- Open Graph / WhatsApp / LinkedIn / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omiii4274.github.io/portfolio/">
+    <meta property="og:title" content="Om J Patel — Web Designer & Developer">
+    <meta property="og:description" content="Web Designer & Developer crafting pixel-perfect interfaces and seamless digital experiences — from Figma wireframes to full-stack applications.">
+    <meta property="og:image" content="https://omiii4274.github.io/portfolio/Me.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://omiii4274.github.io/portfolio/">
+    <meta name="twitter:title" content="Om J Patel — Web Designer & Developer">
+    <meta name="twitter:description" content="Web Designer & Developer crafting pixel-perfect interfaces and seamless digital experiences — from Figma wireframes to full-stack applications.">
+    <meta name="twitter:image" content="https://omiii4274.github.io/portfolio/Me.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -33,13 +52,14 @@
         <a href="#experience" onclick="closeMob()">Experience</a>
         <a href="#education" onclick="closeMob()">Education</a>
         <a href="#contact" onclick="closeMob()">Contact</a>
-        <a href="Om_Patel_Resume.pdf" target="_blank" onclick="closeMob()" style="color:var(--gold);">Resume ↗</a>
+        <a href="javascript:void(0)" onclick="closeMob(); openResumeModal();" style="color:var(--gold);">View Resume ↗</a>
     </div>
 
     <!-- Desktop Navigation -->
     <nav id="mainNav">
         <a class="nav-logo" href="#">
-            <img src="favicon.svg" alt="OP Logo" class="nav-logo-icon" width="32" height="32" onerror="this.onerror=null;this.src='favicon.png'">
+            <img src="favicon.svg" alt="OP Logo" class="nav-logo-icon" width="32" height="32"
+                onerror="this.onerror=null;this.src='favicon.png'">
             OM <span>PATEL</span>
         </a>
         <ul class="nav-links">
@@ -51,6 +71,10 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
+            <button type="button" class="nav-resume-btn" onclick="openResumeModal()">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Resume
+            </button>
             <a class="nav-cta" href="mailto:ompatel4274@gmail.com">Hire Me</a>
             <button class="ham" id="ham" aria-label="Toggle navigation menu" onclick="toggleMob()">
                 <span></span><span></span><span></span>
@@ -76,15 +100,15 @@
                     </svg>
                     View Work
                 </a>
-                <a href="Om_Patel_Resume.pdf" target="_blank" class="btn-outline">
+                <button type="button" onclick="openResumeModal()" class="btn-outline">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.5">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    Resume
-                </a>
+                    View Resume
+                </button>
                 <a href="mailto:ompatel4274@gmail.com" class="btn-outline">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2.5">
@@ -157,13 +181,13 @@
                         </svg>
                         LinkedIn: Om Patel
                     </a>
-                    <a href="https://github.com/omiii6342" target="_blank">
+                    <a href="https://github.com/omiii4274" target="_blank">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path
                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                         </svg>
-                        GitHub: omiii6342
+                        GitHub: omiii4274
                     </a>
                     <a href="#">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -315,11 +339,18 @@
                     </div>
                     <div class="project-actions">
                         <button type="button" class="btn-project-primary" onclick="openProjectModal('nomadic', 'demo')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
                             Live Demo
                         </button>
                         <button type="button" class="btn-project-code" onclick="openProjectModal('nomadic', 'code')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
                             View Code
                         </button>
                     </div>
@@ -348,12 +379,20 @@
                         <span class="tech-chip">Swiper.js</span>
                     </div>
                     <div class="project-actions">
-                        <button type="button" class="btn-project-primary" onclick="openProjectModal('glamvibes', 'demo')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        <button type="button" class="btn-project-primary"
+                            onclick="openProjectModal('glamvibes', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
                             Interactive Store
                         </button>
                         <button type="button" class="btn-project-code" onclick="openProjectModal('glamvibes', 'code')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
                             View Code
                         </button>
                     </div>
@@ -379,12 +418,20 @@
                         <span class="tech-chip">Proximity Sensors</span>
                     </div>
                     <div class="project-actions">
-                        <button type="button" class="btn-project-primary" onclick="openProjectModal('anti_theft', 'demo')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        <button type="button" class="btn-project-primary"
+                            onclick="openProjectModal('anti_theft', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
                             Hardware Sim
                         </button>
                         <button type="button" class="btn-project-code" onclick="openProjectModal('anti_theft', 'code')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
                             Arduino Code
                         </button>
                     </div>
@@ -413,12 +460,20 @@
                         <span class="tech-chip">Mobile App</span>
                     </div>
                     <div class="project-actions">
-                        <button type="button" class="btn-project-primary" onclick="openProjectModal('fire_robot', 'demo')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        <button type="button" class="btn-project-primary"
+                            onclick="openProjectModal('fire_robot', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
                             Robot Controller
                         </button>
                         <button type="button" class="btn-project-code" onclick="openProjectModal('fire_robot', 'code')">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
                             Firmware Code
                         </button>
                     </div>
@@ -444,12 +499,19 @@
                         <div class="figma-title">UI Design Prototype — Vol. 1</div>
                         <div class="figma-sub">Wireframing · High-Fidelity Mockup · User Flow · Prototype</div>
                         <div class="project-actions" style="margin-top:1rem;">
-                            <button type="button" class="btn-project-primary" onclick="openProjectModal('figma1', 'demo')">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <button type="button" class="btn-project-primary"
+                                onclick="openProjectModal('figma1', 'demo')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                                 UX Flow
                             </button>
                             <button type="button" class="btn-project-code" onclick="openProjectModal('figma1', 'code')">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                                 Design System
                             </button>
                         </div>
@@ -467,12 +529,19 @@
                         <div class="figma-title">UI Design Prototype — Vol. 2</div>
                         <div class="figma-sub">Responsive Layout · Component Design · Interactive Prototype</div>
                         <div class="project-actions" style="margin-top:1rem;">
-                            <button type="button" class="btn-project-primary" onclick="openProjectModal('figma2', 'demo')">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <button type="button" class="btn-project-primary"
+                                onclick="openProjectModal('figma2', 'demo')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                </svg>
                                 UX Flow
                             </button>
                             <button type="button" class="btn-project-code" onclick="openProjectModal('figma2', 'code')">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
                                 Design System
                             </button>
                         </div>
@@ -587,7 +656,7 @@
                     </svg>
                     LinkedIn
                 </a>
-                <a href="https://github.com/omiii6342" class="social-btn" target="_blank">
+                <a href="https://github.com/omiii4274" class="social-btn" target="_blank">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path
                             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
@@ -669,21 +738,31 @@
                     <span class="modal-badge" id="modalBadge">Academic Project</span>
                     <h3 class="modal-title" id="modalTitle">Project Title</h3>
                 </div>
-                <button type="button" class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+                <button type="button" class="modal-close-btn" onclick="closeProjectModal()"
+                    aria-label="Close modal">&times;</button>
             </div>
 
             <!-- Modal Navigation Tabs -->
             <div class="modal-tabs">
                 <button type="button" class="modal-tab active" id="tabBtnDemo" onclick="switchModalTab('demo')">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
                     Live Demo & Simulation
                 </button>
                 <button type="button" class="modal-tab" id="tabBtnCode" onclick="switchModalTab('code')">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
                     Full Source Code
                 </button>
                 <button type="button" class="modal-tab" id="tabBtnSpecs" onclick="switchModalTab('specs')">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
                     Architecture & How to Run
                 </button>
             </div>
@@ -691,6 +770,165 @@
             <!-- Modal Content Body -->
             <div class="modal-body" id="modalBody">
                 <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ── INTERACTIVE RESUME MODAL VIEWER ── -->
+    <div class="modal-backdrop" id="resumeModalBackdrop" onclick="closeResumeModal(event)">
+        <div class="modal-window resume-modal-window" onclick="event.stopPropagation()">
+            <!-- Resume Header -->
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <span class="modal-badge">Curriculum Vitae</span>
+                    <h3 class="modal-title">Om J Patel — Resume</h3>
+                    <p class="modal-sub">Final-Year B.Tech IT · Parul University</p>
+                </div>
+                <div class="resume-header-actions">
+                    <a href="Om_Patel_Resume.pdf" download="Om_Patel_Resume.pdf" class="btn-resume-action btn-resume-download" title="Download PDF file">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download PDF
+                    </a>
+                    <a href="Om_Patel_Resume.pdf" target="_blank" class="btn-resume-action btn-resume-external" title="Open PDF in Full Screen">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Full Screen ↗
+                    </a>
+                    <button type="button" class="modal-close-btn" onclick="closeResumeModal()" aria-label="Close modal">&times;</button>
+                </div>
+            </div>
+
+            <!-- Resume Tabs -->
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab active" id="tabBtnPdf" onclick="switchResumeTab('pdf')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    PDF Document
+                </button>
+                <button type="button" class="modal-tab" id="tabBtnSummary" onclick="switchResumeTab('summary')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    Interactive Executive Summary
+                </button>
+            </div>
+
+            <!-- Resume Content Body -->
+            <div class="modal-body resume-modal-body" id="resumeModalBody">
+                <!-- PDF Viewer Tab -->
+                <div id="resumePdfView" class="resume-view active">
+                    <iframe src="Om_Patel_Resume.pdf#toolbar=1&navpanes=0" class="resume-iframe" title="Om Patel Resume PDF"></iframe>
+                </div>
+
+                <!-- Executive Web Summary Tab -->
+                <div id="resumeSummaryView" class="resume-view">
+                    <div class="resume-doc">
+                        <div class="resume-doc-header">
+                            <div>
+                                <h2 class="resume-doc-name">Om J Patel</h2>
+                                <div class="resume-doc-role">Web Designer & Developer · UI/UX Specialist</div>
+                            </div>
+                            <div class="resume-doc-contact">
+                                <div>Vadodara, Gujarat, India</div>
+                                <div><a href="mailto:ompatel4274@gmail.com">ompatel4274@gmail.com</a></div>
+                                <div><a href="tel:+917016698923">+91 7016698923</a></div>
+                                <div><a href="https://linkedin.com/in/om-j-patel-4p2oo7j4a/" target="_blank">LinkedIn Profile ↗</a></div>
+                                <div><a href="https://github.com/omiii4274" target="_blank">GitHub Profile ↗</a></div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Summary -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Professional Summary</h4>
+                            <p class="resume-text">
+                                Final-year Information Technology undergraduate at Parul University with professional internship experience in UI/UX design, Figma wireframing, and modern web application development. Proven track record of turning business requirements into polished, user-centered digital products with HTML5, CSS3, JavaScript, PHP, MySQL, and responsive frontend architectures.
+                            </p>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Education</h4>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">Bachelor of Technology in Information Technology</span>
+                                    <span class="resume-item-date">2023 – 2026 (Final Year)</span>
+                                </div>
+                                <div class="resume-item-sub">Parul University, Limda, Vadodara · <strong>CGPA: 7.18 / 10.0</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Experience -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Professional Experience</h4>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">UI/UX Design Intern</span>
+                                    <span class="resume-item-date">Jan 2026 – Apr 2026</span>
+                                </div>
+                                <div class="resume-item-sub">Quix Solutions PVT LTD, Vadodara</div>
+                                <ul class="resume-bullets">
+                                    <li>Architected and prototyped high-fidelity UI/UX workflows in Figma for live client projects.</li>
+                                    <li>Engineered cross-platform mobile and web application screens using React Native and modern front-end technologies.</li>
+                                    <li>Integrated AI Studio and Google Stitch prototyping tools to accelerate wireframing turnaround by 40%.</li>
+                                    <li>Collaborated closely with engineering leads and product teams to translate complex requirements into intuitive user interfaces.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Key Projects -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Featured Projects</h4>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">Nomadic — Full-Stack Travel Booking Platform</span>
+                                    <span class="resume-item-tags">PHP · MySQL · JavaScript · HTML5/CSS3</span>
+                                </div>
+                                <p class="resume-text">Architected a responsive booking portal featuring dynamic destination filtering, SQL schema optimization, session-based customer authentication, and real-time reservation confirmation.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">GLAM VIBES — Luxury Fashion E-Commerce</span>
+                                    <span class="resume-item-tags">HTML5 · CSS3 · JavaScript · Swiper.js</span>
+                                </div>
+                                <p class="resume-text">Developed a high-performance fashion shopping interface featuring interactive product drawers, vibe-based category filters, dynamic cart subtotaling, and 60fps responsive animations.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">IoT Anti-Theft Security System</span>
+                                    <span class="resume-item-tags">C++ / Arduino · HC-SR501 PIR · Sensors · Telemetry</span>
+                                </div>
+                                <p class="resume-text">Programmed microcontroller firmware implementing low-latency motion detection, multi-frequency acoustic alarm triggers, and cloud telemetry integration.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="resume-item-header">
+                                    <span class="resume-item-title">IoT Autonomous Fire-Fighting Robot</span>
+                                    <span class="resume-item-tags">Microcontroller Firmware · Triple-Flame Array · PWM Submersible Pump</span>
+                                </div>
+                                <p class="resume-text">Designed an autonomous dual-mode robotic vehicle capable of directional infrared flame tracking, automated nozzle servo aiming, and smartphone Bluetooth manual navigation.</p>
+                            </div>
+                        </div>
+
+                        <!-- Technical Skills -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Technical Skills & Tooling</h4>
+                            <div class="resume-skills-grid">
+                                <div><strong style="color:var(--gold);">Languages & Web:</strong> HTML5, CSS3, JavaScript (ES6+), React Native (Basics), Swiper.js</div>
+                                <div><strong style="color:var(--gold);">Design & UI/UX:</strong> Figma, Wireframing, User Flow, Component Design, Responsive Systems</div>
+                                <div><strong style="color:var(--gold);">Backend & DB:</strong> PHP, MySQL Relational Database, MongoDB, RESTful APIs</div>
+                                <div><strong style="color:var(--gold);">IoT & Embedded:</strong> Arduino / C++, Sensor Fusion (PIR, Flame, Ultrasonic), Hardware Prototyping</div>
+                                <div><strong style="color:var(--gold);">Tools & Workflow:</strong> Git, GitHub, VS Code, Postman, AI Studio, Google Stitch</div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="resume-section">
+                            <h4 class="resume-section-heading">Certifications</h4>
+                            <ul class="resume-bullets inline-bullets">
+                                <li>Introduction to IoT (Great Learning)</li>
+                                <li>Computer Networking (NPTEL)</li>
+                                <li>Power BI Workshop (Certified)</li>
+                                <li>Deloitte Data Analytics (Deloitte)</li>
+                                <li>Python & Advanced Python Training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
