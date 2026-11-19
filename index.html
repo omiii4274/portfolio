@@ -10,7 +10,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#080808">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,7 +39,7 @@
     <!-- Desktop Navigation -->
     <nav id="mainNav">
         <a class="nav-logo" href="#">
-            <img src="favicon.svg" alt="OP Logo" class="nav-logo-icon">
+            <img src="favicon.svg" alt="OP Logo" class="nav-logo-icon" width="32" height="32" onerror="this.onerror=null;this.src='favicon.png'">
             OM <span>PATEL</span>
         </a>
         <ul class="nav-links">
@@ -308,6 +313,16 @@
                         <span class="tech-chip">CSS3</span>
                         <span class="tech-chip">JavaScript</span>
                     </div>
+                    <div class="project-actions">
+                        <button type="button" class="btn-project-primary" onclick="openProjectModal('nomadic', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Live Demo
+                        </button>
+                        <button type="button" class="btn-project-code" onclick="openProjectModal('nomadic', 'code')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            View Code
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -332,6 +347,16 @@
                         <span class="tech-chip">JavaScript</span>
                         <span class="tech-chip">Swiper.js</span>
                     </div>
+                    <div class="project-actions">
+                        <button type="button" class="btn-project-primary" onclick="openProjectModal('glamvibes', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Interactive Store
+                        </button>
+                        <button type="button" class="btn-project-code" onclick="openProjectModal('glamvibes', 'code')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            View Code
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -352,6 +377,16 @@
                         <span class="tech-chip">IoT Modules</span>
                         <span class="tech-chip">Motion Sensors</span>
                         <span class="tech-chip">Proximity Sensors</span>
+                    </div>
+                    <div class="project-actions">
+                        <button type="button" class="btn-project-primary" onclick="openProjectModal('anti_theft', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Hardware Sim
+                        </button>
+                        <button type="button" class="btn-project-code" onclick="openProjectModal('anti_theft', 'code')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            Arduino Code
+                        </button>
                     </div>
                 </div>
             </div>
@@ -377,6 +412,16 @@
                         <span class="tech-chip">IoT</span>
                         <span class="tech-chip">Mobile App</span>
                     </div>
+                    <div class="project-actions">
+                        <button type="button" class="btn-project-primary" onclick="openProjectModal('fire_robot', 'demo')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Robot Controller
+                        </button>
+                        <button type="button" class="btn-project-code" onclick="openProjectModal('fire_robot', 'code')">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            Firmware Code
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -398,6 +443,16 @@
                     <div class="figma-info">
                         <div class="figma-title">UI Design Prototype — Vol. 1</div>
                         <div class="figma-sub">Wireframing · High-Fidelity Mockup · User Flow · Prototype</div>
+                        <div class="project-actions" style="margin-top:1rem;">
+                            <button type="button" class="btn-project-primary" onclick="openProjectModal('figma1', 'demo')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                UX Flow
+                            </button>
+                            <button type="button" class="btn-project-code" onclick="openProjectModal('figma1', 'code')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                Design System
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="figma-card reveal">
@@ -411,6 +466,16 @@
                     <div class="figma-info">
                         <div class="figma-title">UI Design Prototype — Vol. 2</div>
                         <div class="figma-sub">Responsive Layout · Component Design · Interactive Prototype</div>
+                        <div class="project-actions" style="margin-top:1rem;">
+                            <button type="button" class="btn-project-primary" onclick="openProjectModal('figma2', 'demo')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                UX Flow
+                            </button>
+                            <button type="button" class="btn-project-code" onclick="openProjectModal('figma2', 'code')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                Design System
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -594,6 +659,41 @@
             </div>
         </div>
     </section>
+
+    <!-- ── INTERACTIVE PROJECT & SOURCE CODE MODAL ── -->
+    <div class="modal-backdrop" id="projectModalBackdrop" onclick="closeProjectModal(event)">
+        <div class="modal-window" onclick="event.stopPropagation()">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div class="modal-header-info">
+                    <span class="modal-badge" id="modalBadge">Academic Project</span>
+                    <h3 class="modal-title" id="modalTitle">Project Title</h3>
+                </div>
+                <button type="button" class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close modal">&times;</button>
+            </div>
+
+            <!-- Modal Navigation Tabs -->
+            <div class="modal-tabs">
+                <button type="button" class="modal-tab active" id="tabBtnDemo" onclick="switchModalTab('demo')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Live Demo & Simulation
+                </button>
+                <button type="button" class="modal-tab" id="tabBtnCode" onclick="switchModalTab('code')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    Full Source Code
+                </button>
+                <button type="button" class="modal-tab" id="tabBtnSpecs" onclick="switchModalTab('specs')">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    Architecture & How to Run
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="modal-body" id="modalBody">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <!-- ── FOOTER ── -->
     <footer>

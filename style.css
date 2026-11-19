@@ -125,6 +125,8 @@ nav.scrolled {
 .nav-logo-icon {
   width: 32px;
   height: 32px;
+  display: inline-block;
+  flex-shrink: 0;
   border-radius: 8px;
   object-fit: contain;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1340,10 +1342,492 @@ footer a {
     padding: 1.8rem 1.4rem;
   }
 
-  footer {
-    padding: 2rem 1.5rem;
-    flex-direction: column;
-    gap: 0.8rem;
-    text-align: center;
+/* ── PROJECT CARD ACTIONS & BUTTONS ── */
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-project-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  padding: 0.65rem 1.35rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px var(--gold-glow);
+}
+
+.btn-project-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(232, 197, 71, 0.45);
+}
+
+.btn-project-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1.35rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-project-code:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(232, 197, 71, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── INTERACTIVE PROJECT & SOURCE CODE MODAL ── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 4, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-window {
+  background: #0d0e12;
+  border: 1px solid rgba(232, 197, 71, 0.25);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 960px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 50px rgba(232, 197, 71, 0.08);
+  overflow: hidden;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.active .modal-window {
+  transform: translateY(0) scale(1);
+}
+
+.modal-header {
+  padding: 1.8rem 2.2rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+  background: rgba(14, 15, 20, 0.8);
+}
+
+.modal-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.modal-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1.8rem;
+  line-height: 1;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.modal-close-btn:hover {
+  background: rgba(232, 197, 71, 0.15);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: rotate(90deg);
+}
+
+.modal-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 0.8rem 2.2rem;
+  background: rgba(10, 11, 15, 0.95);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.modal-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.55rem 1.1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.modal-tab:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.modal-tab.active {
+  color: var(--bg);
+  background: var(--gold);
+  border-color: var(--gold);
+  font-weight: 700;
+  box-shadow: 0 2px 10px var(--gold-glow);
+}
+
+.modal-body {
+  padding: 2rem 2.2rem;
+  overflow-y: auto;
+  flex: 1;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* ── MODAL SOURCE CODE VIEWER ── */
+.code-viewer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.code-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #08090c;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+}
+
+.code-file-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.code-file-btn {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.code-file-btn.active {
+  color: var(--gold);
+  background: rgba(232, 197, 71, 0.1);
+  border-color: rgba(232, 197, 71, 0.3);
+  font-weight: 600;
+}
+
+.code-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.code-copy-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.code-editor-box {
+  background: #060709;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.4rem;
+  overflow-x: auto;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
+
+.code-editor-box pre {
+  margin: 0;
+  white-space: pre;
+}
+
+/* ── MODAL INTERACTIVE SIMULATORS ── */
+.simulator-card {
+  background: #08090d;
+  border: 1px solid rgba(232, 197, 71, 0.2);
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sim-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sim-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.sim-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sim-badge.active {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.sim-badge.alert {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sim-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sim-field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sim-field select,
+.sim-field input {
+  background: #0f1015;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.sim-field select:focus,
+.sim-field input:focus {
+  border-color: var(--gold);
+}
+
+.sim-btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sim-btn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sim-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--gold-glow);
+}
+
+.sim-btn.secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}
+
+.sim-btn.secondary:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.sim-console {
+  background: #050608;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'Consolas', monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #38bdf8;
+  margin-top: 1.2rem;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.sim-console p {
+  margin: 0 0 4px;
+}
+
+.sim-console p.log-success { color: #22c55e; }
+.sim-console p.log-alert { color: #ef4444; }
+.sim-console p.log-info { color: #38bdf8; }
+
+/* ── MODAL SPECS & SETUP TAB ── */
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.specs-table th,
+.specs-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.specs-table th {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--gold);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.specs-steps {
+  margin-top: 1.2rem;
+  padding-left: 1.4rem;
+}
+
+.specs-steps li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.specs-steps code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .modal-window {
+    max-height: 94vh;
+    border-radius: 18px;
+  }
+  .modal-header,
+  .modal-tabs,
+  .modal-body {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+  .modal-title {
+    font-size: 1.25rem;
   }
 }
+
